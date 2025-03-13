@@ -1,8 +1,8 @@
-# Web Fuzzer - Web Vulnerability Scanner
+# Lethality - Web Fuzzer & Vulnerability Scanner
 
 ## Overview
 
-**Web Fuzzer** is a powerful web vulnerability scanner designed to identify common security issues on websites. It performs checks on headers, technologies used, potential vulnerabilities, and open ports, providing insights to help enhance web application security. Whether you are a developer, security researcher, or system administrator, this tool can assist in identifying and mitigating web security risks.
+_**Lethality**_ is a powerful web vulnerability scanner designed to identify common security issues on websites. It performs checks on headers, technologies used, potential vulnerabilities, and open ports, providing insights to help enhance web application security. Whether you are a developer, security researcher, or system administrator, this tool can assist in identifying and mitigating web security risks.
 
 ## Features
 
@@ -45,7 +45,7 @@ pip install -r requirements.txt
 
 ### Install Nmap
 
-**Web Fuzzer** uses **Nmap** for port scanning. Make sure Nmap is installed:
+**Lethality** uses **Nmap** for port scanning. Make sure Nmap is installed:
 
 - **Linux**: `sudo apt install nmap`
 - **Windows**: Download from [Nmap Official Site](https://nmap.org/download.html)
@@ -94,7 +94,7 @@ The app will be available at `http://127.0.0.1:5000/`.
 
 ## Security Recommendations
 
-After scanning a website, **Web Fuzzer** provides a detailed list of security best practices, such as:
+After scanning a website, **Lethality** provides a detailed list of security best practices, such as:
 
 - **Input Validation**: Always sanitize and validate user inputs to prevent XSS, SQL Injection, and other attacks.
 - **HTTPS**: Use HTTPS to ensure data encryption.

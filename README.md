@@ -28,8 +28,8 @@ To get started with Web Fuzzer, follow these steps:
 ### Clone the Repository
 
 ```bash
-https://github.com/noorulhassan1408/lethality.git
-cd lethality
+https://github.com/noorulhassan1408/Lethality.git
+cd Lethality
 ```
 
 ### Install Dependencies

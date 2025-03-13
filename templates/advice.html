@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="card bg-light">
+        <div class="card-body">
+            <h2 class="card-title text-cyan">Security Advice</h2>
+            <p>Based on the scan results, here are some recommendations to improve your website's security:</p>
+            <ul class="list-group">
+                <li class="list-group-item">1. Always sanitize and validate user inputs to prevent SQL Injection.</li>
+                <li class="list-group-item">2. Use Content Security Policy (CSP) headers to mitigate XSS attacks.</li>
+                <li class="list-group-item">3. Implement CSRF tokens in forms to protect against CSRF attacks.</li>
+                <li class="list-group-item">4. Disable unused services and close unnecessary ports.</li>
+                <li class="list-group-item">5. Regularly update your software and dependencies to the latest versions.</li>
+                <li class="list-group-item">6. Use HTTPS to encrypt data in transit.</li>
+                <li class="list-group-item">7. Restrict direct access to sensitive files and directories.</li>
+                <li class="list-group-item">8. Use parameterized queries or ORM to prevent SQL Injection.</li>
+                <li class="list-group-item">9. Regularly back up your data and have a disaster recovery plan.</li>
+                <li class="list-group-item">10. Conduct regular security audits and vulnerability assessments.</li>
+            </ul>
+            <div class="mt-4">
+                <a href="{{ url_for('index') }}" class="btn btn-cyan">Scan Another</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

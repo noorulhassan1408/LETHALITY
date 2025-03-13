@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Analysis Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Web Analysis Tool </h1>
+            <p>Analyze websites for vulnerabilities, open ports, headers, and technologies.</p>
+        </header>
+
+        <div class="features">
+            <h2>Features</h2>
+            <ul>
+                <li>Scans the entire website for headers</li>
+                <li>Identifies technologies used by the website</li>
+                <li>Detects various vulnerabilities</li>
+                <li>Lists open ports</li>
+            </ul>
+        </div>
+
+        <form id="scan-form" action="{{ url_for('scan') }}" method="post">
+            <label for="url">Website URL:</label>
+            <input type="text" id="url" name="url" required>
+            <button type="submit">Scan</button>
+        </form>
+
+        <div class="progress">
+            <div class="progress-bar" id="progress-bar">0%</div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#scan-form').on('submit', function() {
+                let progressBar = $('#progress-bar');
+                let width = 0;
+
+                function updateProgressBar() {
+                    if (width >= 100) {
+                        clearInterval(interval);
+                    } else {
+                        width += 1;
+                        progressBar.css('width', width + '%');
+                        progressBar.text(width + '%');
+                    }
+                }
+
+                let interval = setInterval(updateProgressBar, 300);
+            });
+        });
+    </script>
+</body>
+</html>

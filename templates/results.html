@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+    </nav>
+
+    <div class="container">
+        <h1>Scan Results</h1>
+
+        <div class="tabs">
+            <button class="tablink" onclick="openTab(event, 'headers')">Headers</button>
+            <button class="tablink" onclick="openTab(event, 'technology')">Technology</button>
+            <button class="tablink" onclick="openTab(event, 'vulnerabilities')">Vulnerabilities</button>
+            <button class="tablink" onclick="openTab(event, 'open_ports')">Open Ports</button>
+        </div>
+
+        <div id="headers" class="tabcontent">
+            <h2>Headers</h2>
+            <ul>
+                {% for header, value in results.headers.items() %}
+                    <li>{{ header }}: {{ value }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div id="technology" class="tabcontent">
+            <h2>Technology</h2>
+            <ul>
+                {% for tech in results.technology %}
+                    <li>{{ tech }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div id="vulnerabilities" class="tabcontent">
+            <h2>Vulnerabilities</h2>
+            <ul>
+                {% for vulnerability in results.vulnerabilities %}
+                    <li>{{ vulnerability }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div id="open_ports" class="tabcontent">
+            <h2>Open Ports</h2>
+            <ul>
+                {% for port in results.open_ports %}
+                    <li>{{ port }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <form action="{{ url_for('advice') }}" method="get">
+            <button type="submit">Get Security Advice</button>
+        </form>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        // Open the default tab
+        document.getElementsByClassName('tablink')[0].click();
+    </script>
+</body>
+</html>

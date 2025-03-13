@@ -1,0 +1,173 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa;
+    color: #004d40;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #00796b;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav a:hover {
+    background-color: #004d40;
+    border-radius: 5px;
+}
+
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #00796b;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #004d40;
+}
+
+.features {
+    margin-top: 20px;
+    background-color: #b2dfdb;
+    border-radius: 5px;
+    padding: 20px;
+    border: 2px solid #004d40;
+}
+
+.features ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features li {
+    padding: 10px 0;
+}
+
+.progress {
+    width: 100%;
+    background-color: #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.progress-bar {
+    width: 0;
+    height: 30px;
+    background-color: #00796b;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    border-radius: 5px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #00796b;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #004d40;
+}
+
+.tabs {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+.tabs button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+.tabs button:hover {
+    background-color: #ddd;
+}
+
+.tabs button.active {
+    background-color: #ccc;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-top: none;
+    margin-top: -1px;
+}
+
+.tabcontent ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.tabcontent li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.tabcontent h2 {
+    text-align: left;
+    color: #00796b;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #004d40;
+}
